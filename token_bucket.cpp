@@ -8,6 +8,8 @@
 
 namespace ratelimit
 {
+#define stime std::chrono::system_clock::time_point
+#define nanoduration std::chrono::nanoseconds
 
     std::shared_ptr<RateLimiter> TokenBucketRateLimiter::NewBucket(std::chrono::nanoseconds fillInterval, int64_t quantum, int64_t capacity)
     {
